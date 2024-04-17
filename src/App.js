@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+export default function App() {
+  const [uploadImage, setUploadImage] = useState([]);
+  const presetKey = '';
+  const cloudName = '';
+
+  const handleFile = (event) => {
+    const imageFile = event.target.files[0];
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>test</p>
+      <input
+        type="file"
+        multiple
+        className="btn btn-primary mr-3 mb-3"
+        accept="image/png, image/webp, image/jpg, image/jpeg"
+      />
     </div>
   );
 }
-
-export default App;
